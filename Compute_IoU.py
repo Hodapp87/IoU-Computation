@@ -19,7 +19,7 @@ def Cal_IoU(GT_bbox, Pred_bbox):
 
     #2. Calculate the area of all area
     #S = S1 + S2 - area
-    S1 = (Pred_bbox[2] - GT_bbox[0] + 1) * (Pred_bbox[3] - GT_bbox[1] + 1)
+    S1 = (Pred_bbox[2] - Pred_bbox[0] + 1) * (Pred_bbox[3] - Pred_bbox[1] + 1)
     S2 = (GT_bbox[2] - GT_bbox[0] + 1) * (GT_bbox[3] - GT_bbox[1] + 1)
     S = S1 + S2 - area
 
